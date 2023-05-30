@@ -6,7 +6,7 @@ import { getMovie } from "components/GetMovie/getMovie";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const REQUEST_API = 'trending/movie/day';
+const REQUEST_API = 'trending/movie/day?';
 const Home = () => {
 const [movies, setMovies] = useState([]);
 useEffect(()=>{
