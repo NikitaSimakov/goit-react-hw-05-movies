@@ -15,7 +15,7 @@ useEffect(()=>{
 console.log(movies)
   return <>
   <ul>
-    {movies && movies.map(({title, id}) => <li key={id}><Link to={`${id}`}>{title}</Link></li>)}
+    {movies && movies.map(({title, id}) => <li key={id}><Link to={`/movies/${id}`}>{title}</Link></li>)}
   </ul>
   </>
 };
