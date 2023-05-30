@@ -4,6 +4,7 @@
 
 import { getMovie } from "components/GetMovie/getMovie";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 const [movies, setMovies] = useState('');
@@ -14,7 +15,7 @@ console.log(movies)
   return <>
   <div>Home</div>
   <ul>
-    {movies.map(({title, id}) => <li key={id}><h3>{title}</h3></li>)}
+    {movies && movies.map(({title, id}) => <li key={id}><Link to="movies">{title}</Link></li>)}
   </ul>
   </>
 };
