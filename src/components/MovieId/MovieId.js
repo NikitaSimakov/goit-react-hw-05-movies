@@ -1,7 +1,8 @@
-import { getMovie } from "components/GetMovie/getMovie";
 import { useEffect, useState } from "react";
+import { getMovie } from "components/GetMovie/getMovie";
 
-const { useParams, Link } = require("react-router-dom")
+
+const { useParams, Link, Outlet } = require("react-router-dom")
 
 const MovieId = () => {
     const [movie, setMovie] = useState({})
@@ -15,7 +16,7 @@ const MovieId = () => {
       return (
         <div>
             <Link to="/"><button type="button" >Go back</button></Link>
-            <img alt={movie.original_title} src={movie.poster_path && `https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
+            <img alt={movie.title} src={movie.poster_path && `https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
             <h1>{movie.original_title}</h1>
             <p>User score: {Math.trunc((movie.vote_average)*10)}%</p>
             <h2>Overview</h2>
@@ -29,6 +30,7 @@ const MovieId = () => {
                 <li><Link to={`/movies/${params.movieId}/reviews`}>Reviews</Link></li>
                 </ul>
             </div>
+            <Outlet />
         </div>
         
       )
