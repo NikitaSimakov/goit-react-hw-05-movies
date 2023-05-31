@@ -14,7 +14,7 @@ const Cast = () => {
     const { movieId }  = useParams();
     useEffect(()=>{
         const REQUEST_API = `movie/${movieId}/credits?`
-        if (movieId !== '') getMovie(REQUEST_API).then(resp => setCast(resp.cast)).then(console.log(cast))
+        if (movieId !== '') getMovie(REQUEST_API).then(resp => setCast(resp.cast))
     }, [movieId]);
     return <>
     <h1>Cast</h1>
