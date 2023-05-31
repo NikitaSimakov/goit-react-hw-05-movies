@@ -8,7 +8,7 @@ const Reviews = () => {
     const { movieId }  = useParams();
     useEffect(()=>{
         const REQUEST_API = `movie/${movieId}/reviews?`
-        if (movieId !== '') getMovie(REQUEST_API).then(setReviews).then(console.log(reviews))
+        if (movieId !== '') getMovie(REQUEST_API).then(setReviews)
     }, [movieId]);
     return <>
     <h1>Reviews</h1>
