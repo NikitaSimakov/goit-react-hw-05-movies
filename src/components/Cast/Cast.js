@@ -19,9 +19,10 @@ const Cast = () => {
     return <>
     <h1>Cast</h1>
     <ul>
-    {cast.map(profile => <li>
+    {cast.map(profile => <li key={profile.id}>
         <img alt={profile.name} src={profile.profile_path && `https://image.tmdb.org/t/p/w200${profile.profile_path}`} />
         <h3>{profile.name}</h3>
+        <p>{profile.character}</p>
     </li>)}
     </ul>
     </>
