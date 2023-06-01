@@ -1,5 +1,6 @@
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { getMovie } from "components/GetMovie/getMovie";
+import Loader from "components/Loader/Loader";
 
 
 const { useParams, Link, Outlet, useLocation } = require("react-router-dom")
@@ -37,7 +38,9 @@ const MovieDetails = () => {
                 <li><Link to={`/movies/${params.movieId}/reviews`}>Reviews</Link></li>
                 </ul>
             </div>
+            <Suspense fallback={<Loader/>}>
             <Outlet />
+            </Suspense>
         </div>
         
       )
