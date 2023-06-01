@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 
 const REQUEST_API = 'trending/movie/day?';
 const Home = () => {
-const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]);
 useEffect(()=>{
   getMovie(REQUEST_API).then(resp => setMovies(resp.results))
 },[]);
-console.log(movies)
+// console.log(movies)
   return <>
   <ul>
     {movies && movies.map(({title, id}) => <li key={id}><Link to={`/movies/${id}`}>{title}</Link></li>)}
