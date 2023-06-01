@@ -12,7 +12,7 @@ const Movies = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
-  console.log(location.state)
+  // console.log(location.state)
   // console.log(searchParams);
 
   
@@ -47,7 +47,7 @@ const Movies = () => {
   </form>
   <div>
     <ul>
-      {movies.map(({ title, id }) => <li key={id}><Link to={`/movies/${id}`} state={location}>{title}</Link></li>)}
+      {movies.map(({ title, id }) => <li key={id}><Link to={`/movies/${id}`} state={{from: location}}>{title}</Link></li>)}
     </ul>
   </div>
   </>)
