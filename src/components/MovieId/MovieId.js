@@ -10,7 +10,7 @@ const MovieId = () => {
     const location = useLocation();
     const linkLocationBackRef = useRef(location);
     // console.log(location);
-    console.log(linkLocationBackRef)
+    // console.log(linkLocationBackRef)
     useEffect(()=>{
         const { movieId } = params;
         const REQUEST_API = `movie/${movieId}?`;
