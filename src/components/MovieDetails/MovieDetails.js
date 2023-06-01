@@ -4,7 +4,7 @@ import { getMovie } from "components/GetMovie/getMovie";
 
 const { useParams, Link, Outlet, useLocation } = require("react-router-dom")
 
-const MovieId = () => {
+const MovieDetails = () => {
     const [movie, setMovie] = useState({})
     const params = useParams();
     const location = useLocation();
@@ -43,4 +43,4 @@ const MovieId = () => {
       )
 }
 
-export default MovieId;
+export default MovieDetails;

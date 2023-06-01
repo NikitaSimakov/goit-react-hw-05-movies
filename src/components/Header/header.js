@@ -2,10 +2,12 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
     return (
-     <nav>
+    <div className="header">
+    <nav>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/movies">Movies</NavLink>
      </nav>
+     </div>
     )
 }
 

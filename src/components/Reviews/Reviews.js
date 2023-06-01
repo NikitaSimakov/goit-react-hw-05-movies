@@ -17,7 +17,7 @@ const Reviews = () => {
             <h3>Author: {review.author}</h3>
             <p>{review.content}</p>
         </li>)}
-    </ul> : <h3>We don't have any reviews</h3>}
+    </ul> : <p>We don't have any reviews</p>}
     </>
 };
 
