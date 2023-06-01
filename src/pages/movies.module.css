@@ -1,0 +1,22 @@
+.movies_form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 25px;
+}
+.movies_input {
+    width: 200px;
+}
+.movies_button {
+    background-color: white;
+    border: solid;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+
+.movies_listItem {
+    margin-bottom: 10px;
+}
+.movies_listItem:last-child {
+    margin-bottom: 0;
+}

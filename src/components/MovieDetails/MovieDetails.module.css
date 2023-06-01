@@ -1,0 +1,32 @@
+.movieDetails_wrapper {
+    padding-left: 70px;
+    padding-right: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.movieDetails_card {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+.movieDetails_genres {
+    width: 100%;
+    text-align: center;
+}
+.movieDetails_backButton {
+    background-color: white;
+    border: solid;
+    border-radius: 3px;
+    height: 25px;
+}
+.movieDetails_img {
+    border-radius: 10px;
+}
+.movieDetails_cardText {
+    display: flex;
+    flex-direction: column;
+
+    margin-left: 30px;
+    width: 50%;
+}

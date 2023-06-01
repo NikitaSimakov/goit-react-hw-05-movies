@@ -11,7 +11,7 @@ const Reviews = () => {
         if (movieId !== '') getMovie(REQUEST_API).then(setReviews)
     }, [movieId]);
     return <>
-    <h1>Reviews</h1>
+    <h2>Reviews</h2>
     {reviews.total_results ? <ul>
         {reviews.results && reviews.results.map(review => <li key={review.id}>
             <h3>Author: {review.author}</h3>

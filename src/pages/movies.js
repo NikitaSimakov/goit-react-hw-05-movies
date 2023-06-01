@@ -1,6 +1,7 @@
 import { getMovie } from "components/GetMovie/getMovie";
 import { useEffect, useState } from "react";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
+import css from './movies.module.css'
 
 // import { useParams } from "react-router-dom";
 
@@ -41,13 +42,13 @@ const Movies = () => {
     // console.log(queryParam)
   },[query, searchParams])
   return (<>
-  <form onSubmit={handleSubmit}>
-    <input type="text" autoComplete="off" placeholder="Search movies" value={value} onChange={handleInput}></input>
-    <button type="submit" >Search</button>
+  <form onSubmit={handleSubmit} className={css.movies_form}>
+    <input className={css.movies_input} type="text" autoComplete="off" placeholder="Search movies" value={value} onChange={handleInput}></input>
+    <button type="submit" className={css.movies_button} >Search</button>
   </form>
   <div>
     <ul>
-      {movies.map(({ title, id }) => <li key={id}><Link to={`/movies/${id}`} state={{from: location}}>{title}</Link></li>)}
+      {movies.map(({ title, id }) => <li key={id} className={css.movies_listItem}><Link to={`/movies/${id}`} state={{from: location}}>{title}</Link></li>)}
     </ul>
   </div>
   </>)

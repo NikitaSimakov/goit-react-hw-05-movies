@@ -1,0 +1,6 @@
+.home_listItem {
+    margin-bottom: 10px;
+}
+.home_listItem:last-child {
+    margin-bottom: 0;
+}

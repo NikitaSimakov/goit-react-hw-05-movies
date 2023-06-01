@@ -17,11 +17,11 @@ const Cast = () => {
         if (movieId !== '') getMovie(REQUEST_API).then(resp => setCast(resp.cast))
     }, [movieId]);
     return <>
-        <h1>Cast</h1>
+        <h2>Cast</h2>
     {cast.length > 0 ? <ul>
         {cast.map(profile => <li key={profile.id}>
         <img alt={profile.name} src={profile.profile_path && `https://image.tmdb.org/t/p/w200${profile.profile_path}`} />
-        <h3>{profile.name}</h3>
+        <h4>{profile.name}</h4>
         <p>{profile.character}</p>
     </li>)}
     </ul> : <p>We don't have any cast</p>}
