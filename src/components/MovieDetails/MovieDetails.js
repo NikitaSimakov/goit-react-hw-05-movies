@@ -31,7 +31,6 @@ const MovieDetails = () => {
             <p>User score: {Math.trunc((movie.vote_average)*10)}%</p>
             <h2>Overview</h2>
             <p>{movie.overview}</p>
-            {/* <h3>Genres</h3> */}
             </div>
             </div>
             <div>
