@@ -11,8 +11,6 @@ const MovieDetails = () => {
     const params = useParams();
     const location = useLocation();
     const linkLocationBackRef = useRef(location);
-    // console.log(location);
-    // console.log(linkLocationBackRef)
     useEffect(()=>{
         const { movieId } = params;
         const REQUEST_API = `movie/${movieId}?`;
@@ -27,7 +25,7 @@ const MovieDetails = () => {
             <Link to={linkLocationBackRef.current.state ? linkLocationBackRefFrom : '/'}><button type="button" className={css.movieDetails_backButton}>Go back</button></Link>
           <div className={css.movieDetails_card}>
             {/* <Link to={`/movies${linkLocationBackRef.current.state?.from.search ?? ''}`}><button type="button" >Go back</button></Link> */}
-            <img alt={movie.title} src={movie.poster_path && `https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
+            <img className={css.movieDetails_img} alt={movie.title} src={movie.poster_path && `https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
             <div className={css.movieDetails_cardText}>
             <h1>{movie.original_title}</h1>
             <p>User score: {Math.trunc((movie.vote_average)*10)}%</p>
