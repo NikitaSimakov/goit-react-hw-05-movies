@@ -27,17 +27,6 @@ export const App = () => {
         <Route path="*" element={<h1>Page not found. Error 404</h1>}/>
     </Route>
       </Routes>
-      {/* <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Home/>} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/movies/:movieId" element={<MovieId />}>
-          <Route path="/movies/:movieId/cast" element={<Cast />}/>
-          <Route path="/movies/:movieId/reviews" element={<Reviews />}/>
-        </Route>
-        <Route path="*" element={<h1>Page not found. Error 404</h1>}/>
-    </Route>
-      </Routes> */}
     </div>
   );
 };
