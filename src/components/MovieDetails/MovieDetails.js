@@ -17,14 +17,12 @@ const MovieDetails = () => {
         getMovie(REQUEST_API).then(resp => setMovie(resp));
       },[params]);
       
-      
       const linkLocationBackRefFrom = `/movies${linkLocationBackRef.current.state?.from.search ?? ''}`
       return (
         <div className={css.movieDetails_wrapper}>
             <p className={css.movieDetails_genres}>{movie.genres && movie.genres.map(genre => genre.name + ' ')}</p>
             <Link to={linkLocationBackRef.current.state ? linkLocationBackRefFrom : '/'}><button type="button" className={css.movieDetails_backButton}>Go back</button></Link>
           <div className={css.movieDetails_card}>
-            {/* <Link to={`/movies${linkLocationBackRef.current.state?.from.search ?? ''}`}><button type="button" >Go back</button></Link> */}
             <img className={css.movieDetails_img} alt={movie.title} src={movie.poster_path && `https://image.tmdb.org/t/p/w300${movie.poster_path}`} />
             <div className={css.movieDetails_cardText}>
             <h1>{movie.original_title}</h1>
