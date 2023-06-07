@@ -39,7 +39,6 @@ const Movies = () => {
     const queryParamApi = `search/movie?query=${queryParam}&`
     if(query !== '') getMovie(REQUEST_API).then(resp => setMovies(resp.results))
     if(queryParam) getMovie(queryParamApi).then(resp => setMovies(resp.results))
-    // console.log(queryParam)
   },[query, searchParams])
   return (<>
   <form onSubmit={handleSubmit} className={css.movies_form}>
